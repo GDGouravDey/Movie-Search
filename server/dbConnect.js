@@ -9,7 +9,7 @@ const dbConnect = () => {
     });
 
     mongoose.connection.on("error", (err) => {
-        console.error(`Error connecting to the Database. \n${err}`);
+        console.error(`Error while connecting to the Database. \n${err}`);
     });
 
     mongoose.connection.on("disconnected", () => {
