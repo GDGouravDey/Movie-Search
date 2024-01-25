@@ -19,9 +19,10 @@ function App() {
 	useEffect(() => {
 		const getAllMovies = async () => {
 			try {
+				let updatedGenre = `${filterGenre.toString()}`.replace(',','&genre=');
 				const url = `${base_url}?page=${page}&sort=${sort.sort},${
 					sort.order
-				}&genre=${filterGenre.toString()}&search=${search}`;
+				}&genre=${updatedGenre}&search=${search}`;
 				const { data } = await axios.get(url);
 				setObj(data);
 			} catch (err) {
