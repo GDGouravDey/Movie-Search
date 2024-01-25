@@ -8,11 +8,16 @@ This is a MERN stack Application that allows users to search for movies in a Mon
 
 Clone the repository and navigate to the project directory. Install dependencies with:
 
-``npm install``
+`npm install`
 
 ## Usage
 
-Start the server with:
-``npm start``
+Start the server with :-
 
-Then, open your web browser and navigate to ``http://localhost:8000`` to start using the application.
+`cd server`
+
+Then,
+
+`npm start`
+
+Then, open your web browser and navigate to ``http://localhost:8000/api/movies`` to start using the application.
