@@ -11,8 +11,11 @@ Clone the repository and navigate to the project directory. Install dependencies
 `npm install`
 
 ## Usage
+1. Insert your MongoDB Connection String in .env file
 
-Start the server with :-
+> Replace YOUR_CONNECTION_STRING_FOR_MONGODB with your Connection String. Make sure to keep it within the double quotes.
+
+2. Start the server with :-
 
 `cd server`
 
