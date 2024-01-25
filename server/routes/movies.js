@@ -57,6 +57,8 @@ router.get("/movies", async (req, res) => {
   }
 });
 
+// Uncomment these lines and run the Application to update the Database if "movies.json" is changed
+
 // const insertMovies = async () => {
 //   try {
 //     await Movie.deleteMany({});
