@@ -1,4 +1,4 @@
-# Movie Search
+# Movie Search Application
 
 ## Description
 
