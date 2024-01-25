@@ -33,6 +33,13 @@ router.get("/movies", async (req, res) => {
       sortBy[sort[0]] = "asc";
     }
 
+    const total = await Movie.find({
+      name: { $regex: search, $options: "i" },
+    })
+      .where("genre")
+      .in([...genre])
+      .countDocuments();
+    
     const movies = await Movie.find({
       name: { $regex: search, $options: "i" },
     })
@@ -44,6 +51,7 @@ router.get("/movies", async (req, res) => {
 
     const response = {
       error: false,
+      total,
       page: page + 1,
       limit,
       genres: genreOptions,
