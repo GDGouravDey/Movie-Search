@@ -65,24 +65,24 @@ router.get("/movies", async (req, res) => {
   }
 });
 
-// Uncomment these lines and run the Application to update the Database if "movies.json" is changed
+// Comment these lines if already updated, Uncomment these lines to update the database if 'movies.json' is updated
 
-// const insertMovies = async () => {
-//   try {
-//     await Movie.deleteMany({});
-//     const docs = await Movie.insertMany(movies);
-//     return Promise.resolve(docs);
-//   } catch (err) {
-//     return Promise.reject(err);
-//   }
-// };
+const insertMovies = async () => {
+  try {
+    await Movie.deleteMany({});
+    const docs = await Movie.insertMany(movies);
+    return Promise.resolve(docs);
+  } catch (err) {
+    return Promise.reject(err);
+  }
+};
 
-// insertMovies()
-//   .then((docs) => {
-//     console.log(docs);
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
+insertMovies()
+  .then((docs) => {
+    console.log(docs);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 module.exports = router;
