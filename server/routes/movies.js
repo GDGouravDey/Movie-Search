@@ -21,6 +21,7 @@ router.get("/movies", async (req, res) => {
       "Drama",
       "Family",
       "Fantasy",
+      "Music",
       "Romance",
       "Sci-fi",
       "Thriller",
