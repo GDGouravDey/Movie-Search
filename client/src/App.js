@@ -19,7 +19,7 @@ function App() {
 	useEffect(() => {
 		const getAllMovies = async () => {
 			try {
-				let updatedGenre = `${filterGenre.toString()}`.replace(',','&genre=');
+				let updatedGenre = `${filterGenre.toString()}`;
 				const url = `${base_url}?page=${page}&sort=${sort.sort},${
 					sort.order
 				}&genre=${updatedGenre}&search=${search}`;

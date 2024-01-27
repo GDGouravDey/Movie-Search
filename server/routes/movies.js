@@ -21,9 +21,12 @@ router.get("/movies", async (req, res) => {
       "Drama",
       "Family",
       "Fantasy",
+      "Romance",
+      "Sci-fi",
+      "Thriller",
     ];
 
-    genre = genre === "All" ? [...genreOptions] : [genre];
+    genre = genre === "All" ? genreOptions : genre.split(",");
     sort = req.query.sort ? req.query.sort.split(",") : [sort];
 
     let sortBy = {};
@@ -54,6 +57,7 @@ router.get("/movies", async (req, res) => {
       total,
       page: page + 1,
       limit,
+      total_pages: Math.ceil(total / limit),
       genres: genreOptions,
       movies,
     };
